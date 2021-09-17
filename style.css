@@ -1,0 +1,51 @@
+html{
+    background: #f8ecb5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    width: min(max(60%,30rem),100%);
+    margin-inline: auto;
+    min-height: 1rem;
+    font-size:clamp(1.2rem, .5vw + 1rem,4rem);
+}
+input {
+    font-size:clamp(1.2rem, 1vw + 1rem,4rem);
+}
+h2{
+    margin-inline: auto;
+    text-align: center;
+    padding-block: 1.2rem;
+}
+#szem_adatok, #pizza_adatok{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-block-end: 1em;
+}
+.szemelyes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap:.5em;
+    margin-block-end: 2em;
+}
+.szemelyes input{
+    margin: unset;
+    width: 40%;
+    text-align: center;
+}
+.szemelyes label{
+    display: block;
+    width: 40%;
+    margin-inline: auto;
+}
+.szemelyes input[type="submit"]{
+    margin-top: 1em;
+}
+.hiba {
+    margin-block: -.5em;
+    color: tomato;
+    font-size:clamp(1rem, .3vw + .5rem,2rem);;
+}
