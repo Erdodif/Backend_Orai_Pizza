@@ -46,16 +46,10 @@ h2{
     width: 40%;
     margin-inline: auto;
 }
-.szemelyes input[type="submit"]{
-    margin-top: 1em;
-}
 .hiba {
     margin-block: -.5em;
     color: tomato;
     font-size:clamp(1rem, .3vw + .5rem,2rem);;
-}
-.pizzaadatok{
-    width: 100%;
 }
 .fajtak input{
     width:100%;
@@ -68,10 +62,42 @@ h2{
     gap:.5em;
     margin-inline: auto;
 }
+.checkers{
+    grid-column: 1 /span  2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#kuldes{
+    margin-block:1em;
+    margin-inline: auto;
+    width: min(50%,8em);
+}
+h2,p,.lmentes_label{
+    user-select: none;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 @media screen and (max-width:500px){
     .fajtak{
         grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         width: 70%;
         gap:1em;
+    }
+    #pizza_fajta{
+        grid-row: 2;
+    }
+    .checkers p{
+        width: 100%;
+        grid-column: 1;
+    }
+    #kuldes{
+        width: 60%;
     }
 }

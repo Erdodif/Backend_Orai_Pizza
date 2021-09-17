@@ -23,7 +23,7 @@ function folytat(adatok){
             throw Error("Az objektum típusa 'undefined'");
         }
         for (i = 0; i < adatok["pizzak"].length; i++){
-            tartalom +=`<option value="${adatok["pizzak"][i]}"></option>`
+            tartalom +=`<option value="${adatok["pizzak"][i]}">${adatok["pizzak"][i]}</option>`
         }
         pizzak.innerHTML = tartalom;
     } catch (e) {

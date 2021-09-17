@@ -59,27 +59,53 @@ function ki($string)
                 }
                 ?> 
                 <input name="kuldott" value="1" hidden>
-                <input type="submit" value="Temp">
             </div>
         </div>
         <div id="pizza_adatok">
             <h2>
                 Pizza Adatai
             </h2>
-            <div class="pizzaadatok">
-                <div class="fajtak">
-                    <label for="pizza_fajta">
-                    Pizza fajtája<?php 
-                    if($p_fajta=== "" && isset($_GET["kuldott"])){
+            <div class="fajtak">
+                <label for="pizza_fajta">
+                Pizza fajtája<?php 
+                if($p_fajta=== "" && isset($_GET["kuldott"])){
+                    echo "<span class='hiba'> (Kötelező)</span>";
+                }
+                ?>:
+                </label>
+                <input list="pizzak" name="p_fajta" id="pizza_fajta" value="<?php echo ki($p_fajta)?>"/>
+                <datalist id="pizzak">
+                </datalist>
+                <div class="checkers">
+                    <p>Méret <?php 
+                    if($p_meret=== "" && isset($_GET["kuldott"])){
                         echo "<span class='hiba'> (Kötelező)</span>";
                     }
-                    ?> :
-                    </label>
-                    <input list="pizzak" name="pizza_fajta" id="pizza_fajta"/>
-                    <datalist id="pizzak">
-                    </datalist>
+                    ?>:
+                    </p>
+                    <div>
+                        <label for="m35">35cm</label>
+                        <input type="radio" name="p_meret" id="m35" value="35" 
+                        <?php if($p_meret === "35" || $p_meret=== ""){ echo "checked";}?>>
+                    </div>
+                    <div>
+                        <label for="m42">42cm</label>
+                        <input type="radio" name="p_meret" id="m42" value="42"
+                        <?php if($p_meret === "42"){ echo "checked";}?>>
+                    </div>
+                    <div>
+                        <label for="m60">60cm</label>
+                        <input type="radio" name="p_meret" id="m60" value="60"
+                        <?php if($p_meret === "60"){ echo "checked";}?>>
+                    </div>
+                </div>
+                <div class="box">
+                    <label for="p_lmentes" id="lmentes_label">Laktózmentes</label>
+                    <input type="checkbox" name="p_lmentes" id="lmentes" value="1" 
+                    <?php if($p_lmentes !==""){echo "checked";}?>>
                 </div>
             </div>
+            <input type="submit" value="Küldés" id="kuldes">
         </div>
     </form>
 </body>
