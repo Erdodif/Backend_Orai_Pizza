@@ -68,10 +68,15 @@ function ki($string)
             </h2>
             <div class="pizzaadatok">
                 <div class="fajtak">
-                    <label for="pizza_fajta">Pizza fajtája:</label>
+                    <label for="pizza_fajta">
+                    Pizza fajtája<?php 
+                    if($p_fajta=== "" && isset($_GET["kuldott"])){
+                        echo "<span class='hiba'> (Kötelező)</span>";
+                    }
+                    ?> :
+                    </label>
                     <input list="pizzak" name="pizza_fajta" id="pizza_fajta"/>
                     <datalist id="pizzak">
-
                     </datalist>
                 </div>
             </div>
