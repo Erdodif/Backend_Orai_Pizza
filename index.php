@@ -100,7 +100,7 @@ function ki($string)
                     </div>
                 </div>
                 <div class="box">
-                    <label for="p_lmentes" id="lmentes_label">Laktózmentes</label>
+                    <label for="p_lmentes" id="lmentes_label">Laktózmentes feltét</label>
                     <input type="checkbox" name="p_lmentes" id="lmentes" value="1" 
                     <?php if($p_lmentes !==""){echo "checked";}?>>
                 </div>

@@ -79,6 +79,7 @@ h2,p,.lmentes_label{
     user-select: none;
 }
 .box{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
