@@ -1,0 +1,14 @@
+.urlap, h2{
+    background: white;
+}
+.urlap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+.urlap p:nth-child(2n-1){
+    text-align: right;
+}
+.urlap p{
+    margin-block:.5em;
+}

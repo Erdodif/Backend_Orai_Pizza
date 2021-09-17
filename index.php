@@ -10,8 +10,17 @@ function ki($string)
 {
     return htmlspecialchars($string,ENT_QUOTES);
 }
+if($nev !== "" &&
+    $hely !== "" &&
+    $email !== "" &&
+    $tel !== "" &&
+    $p_fajta !==  "" &&
+    $p_meret !== ""){
+    $urlap = true;
+}else{
+    $urlap = false;
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -21,9 +30,10 @@ function ki($string)
     <title>Pizzamizéria</title>
     <link rel="shortcut icon" href="M1.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <?php if($urlap){echo '<link rel="stylesheet" href="urlap.css">';}?>
     <script src="brain.js"></script>
 </head>
-<body onload="init();">
+<body <?php if($urlap){echo "onload='urlap();' id='body'";}else{echo 'onload="init();"';}?>>
     <form>
         <div id="szem_adatok">
             <h2 onclick="init();">
