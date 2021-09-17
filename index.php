@@ -21,11 +21,12 @@ function ki($string)
     <title>Pizzamizéria</title>
     <link rel="shortcut icon" href="M1.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="brain.js"></script>
 </head>
-<body>
+<body onload="init();">
     <form>
         <div id="szem_adatok">
-            <h2>
+            <h2 onclick="init();">
                 Személyes adatok
             </h2>
             <div class="szemelyes">
@@ -65,8 +66,14 @@ function ki($string)
             <h2>
                 Pizza Adatai
             </h2>
-            <div>
-                <input type="">
+            <div class="pizzaadatok">
+                <div class="fajtak">
+                    <label for="pizza_fajta">Pizza fajtája:</label>
+                    <input list="pizzak" name="pizza_fajta" id="pizza_fajta"/>
+                    <datalist id="pizzak">
+
+                    </datalist>
+                </div>
             </div>
         </div>
     </form>

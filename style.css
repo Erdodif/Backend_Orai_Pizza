@@ -8,6 +8,9 @@ body {
     min-height: 1rem;
     font-size:clamp(1.2rem, .5vw + 1rem,4rem);
 }
+label{
+    cursor: pointer;
+}
 input {
     font-size:clamp(1.2rem, 1vw + 1rem,4rem);
 }
@@ -17,10 +20,12 @@ h2{
     padding-block: 1.2rem;
 }
 #szem_adatok, #pizza_adatok{
+    width: 100%;
     background: white;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-inline: auto;
     margin-block-end: 1em;
 }
 .szemelyes{
@@ -48,4 +53,25 @@ h2{
     margin-block: -.5em;
     color: tomato;
     font-size:clamp(1rem, .3vw + .5rem,2rem);;
+}
+.pizzaadatok{
+    width: 100%;
+}
+.fajtak input{
+    width:100%;
+    padding: unset;
+}
+.fajtak{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    gap:.5em;
+    margin-inline: auto;
+}
+@media screen and (max-width:500px){
+    .fajtak{
+        grid-template-columns: 1fr;
+        width: 70%;
+        gap:1em;
+    }
 }
